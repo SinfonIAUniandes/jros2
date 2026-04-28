@@ -238,4 +238,24 @@ public class ROS2Topic<T extends ROS2Message<T>>
    {
       return topicType;
    }
+
+   @Override
+   public boolean equals(Object o)
+   {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+
+      ROS2Topic<?> ros2Topic = (ROS2Topic<?>) o;
+
+      if (!java.util.Objects.equals(topicName, ros2Topic.topicName)) return false;
+      return java.util.Objects.equals(topicType, ros2Topic.topicType);
+   }
+
+   @Override
+   public int hashCode()
+   {
+      int result = topicName != null ? topicName.hashCode() : 0;
+      result = 31 * result + (topicType != null ? topicType.hashCode() : 0);
+      return result;
+   }
 }

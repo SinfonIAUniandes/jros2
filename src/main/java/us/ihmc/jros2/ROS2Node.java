@@ -98,6 +98,14 @@ public class ROS2Node implements Closeable
     * A list of {@link ROS2Subscription}\s managed by this node.
     */
    private final List<ROS2Subscription<?>> subscriptions;
+   /**
+    * A list of {@link ROS2ServiceServer}\s managed by this node.
+    */
+   private final List<ROS2ServiceServer<?, ?>> serviceServers;
+   /**
+    * A list of {@link ROS2ServiceClient}\s managed by this node.
+    */
+   private final List<ROS2ServiceClient<?, ?>> serviceClients;
 
    /*
     * Locks
@@ -189,6 +197,8 @@ public class ROS2Node implements Closeable
       topicData = new HashMap<>();
       publishers = new ArrayList<>();
       subscriptions = new ArrayList<>();
+      serviceServers = new ArrayList<>();
+      serviceClients = new ArrayList<>();
 
       closeLock = new ReentrantReadWriteLock(true);
       closed = false;
@@ -219,6 +229,26 @@ public class ROS2Node implements Closeable
     * For managing native Fast-DDS topic memory. For internal-use only.
     */
    <T extends ROS2Message<T>> TopicData getOrCreateTopicData(ROS2Topic<T> topic)
+   {
+      return getOrCreateTopicData(topic, "rt");
+   }
+
+   /**
+    * Create or retrieve a TopicData entry with a custom DDS topic prefix.
+    * <p>
+    * ROS 2 uses different prefixes for different subsystems:
+    * <ul>
+    *    <li>{@code "rt"} for regular topics</li>
+    *    <li>{@code "rq"} for service request topics</li>
+    *    <li>{@code "rr"} for service response topics</li>
+    * </ul>
+    * See: <a href="https://design.ros2.org/articles/topic_and_service_names.html">Topic and Service name mapping to DDS</a>
+    *
+    * @param topic     The ROS 2 topic to create or retrieve data for
+    * @param ddsPrefix The DDS topic prefix to apply (e.g., "rt", "rq", "rr")
+    * @return The TopicData for the given topic, or null if the node is closed
+    */
+   <T extends ROS2Message<T>> TopicData getOrCreateTopicData(ROS2Topic<T> topic, String ddsPrefix)
    {
       closeLock.readLock().lock();
       try
@@ -257,9 +287,7 @@ public class ROS2Node implements Closeable
                    * See "Mapping of ROS 2 Topic and Service Names to DDS Concepts" section of
                    * https://design.ros2.org/articles/topic_and_service_names.html
                    */
-                  // TODO: Support other prefixes depending on ROS subsystem
-                  // Use concat method to avoid string allocation on hot path (though this still allocates)
-                  String prefixedTopicName = "rt".concat(topic.getName());
+                  String prefixedTopicName = ddsPrefix.concat(topic.getName());
                   String topicTypeName = ROS2Message.getNameFromMessageClass(topic.getType());
                   fastddsjava_TopicDataWrapperType topicDataWrapperType = new fastddsjava_TopicDataWrapperType(topicTypeName, CDR_LE);
                   Pointer fastddsTypeSupport = fastddsjava_create_typesupport(topicDataWrapperType);
@@ -292,6 +320,14 @@ public class ROS2Node implements Closeable
     */
    public <T extends ROS2Message<T>> ROS2Publisher<T> createPublisher(ROS2Topic<T> topic, ROS2QoSProfile qosProfile)
    {
+      return createPublisher(topic, qosProfile, "rt");
+   }
+
+   /**
+    * Create a publisher with a custom DDS topic prefix. For internal use by services/actions.
+    */
+   <T extends ROS2Message<T>> ROS2Publisher<T> createPublisher(ROS2Topic<T> topic, ROS2QoSProfile qosProfile, String ddsPrefix)
+   {
       closeLock.readLock().lock();
       try
       {
@@ -318,7 +354,7 @@ public class ROS2Node implements Closeable
                throw new RuntimeException("Failed to load publisher profile: " + publisherProfileName, e);
             }
 
-            TopicData topicData = getOrCreateTopicData(topic);
+            TopicData topicData = getOrCreateTopicData(topic, ddsPrefix);
             ROS2Publisher<T> publisher = new ROS2Publisher<>(fastddsParticipant, publisherProfileName, topic, topicData);
 
             synchronized (publishers)
@@ -395,6 +431,14 @@ public class ROS2Node implements Closeable
     */
    public <T extends ROS2Message<T>> ROS2Subscription<T> createSubscription(ROS2Topic<T> topic, ROS2SubscriptionCallback<T> callback, ROS2QoSProfile qosProfile)
    {
+      return createSubscription(topic, callback, qosProfile, "rt");
+   }
+
+   /**
+    * Create a subscription with a custom DDS topic prefix. For internal use by services/actions.
+    */
+   <T extends ROS2Message<T>> ROS2Subscription<T> createSubscription(ROS2Topic<T> topic, ROS2SubscriptionCallback<T> callback, ROS2QoSProfile qosProfile, String ddsPrefix)
+   {
       closeLock.readLock().lock();
       try
       {
@@ -421,7 +465,7 @@ public class ROS2Node implements Closeable
                throw new RuntimeException("Failed to load subscriber profile: " + subscriberProfileName, e);
             }
 
-            TopicData topicData = getOrCreateTopicData(topic);
+            TopicData topicData = getOrCreateTopicData(topic, ddsPrefix);
             ROS2Subscription<T> subscription = new ROS2Subscription<>(fastddsParticipant, subscriberProfileName, callback, topic, topicData);
 
             synchronized (subscriptions)
@@ -569,9 +613,232 @@ public class ROS2Node implements Closeable
       return removed;
    }
 
-   public Object createService(Class<?> serviceType, String serviceName, Object callback)
+   /**
+    * Create a ROS 2 service server.
+    * <p>
+    * The service server listens for incoming requests on the request topic and invokes the callback to
+    * generate responses. The DDS topic names follow the ROS 2 naming convention:
+    * <ul>
+    *    <li>Request: {@code rq/<serviceName>Request}</li>
+    *    <li>Response: {@code rr/<serviceName>Reply}</li>
+    * </ul>
+    *
+    * @param serviceName  The service name (e.g., "/add_two_ints")
+    * @param requestType  The request message class (e.g., AddTwoInts_Request.class)
+    * @param responseType The response message class (e.g., AddTwoInts_Response.class)
+    * @param callback     The callback to invoke for each incoming request
+    * @param <Req>        The request message type
+    * @param <Res>        The response message type
+    * @return The service server instance
+    */
+   public <Req extends ROS2Message<Req>, Res extends ROS2Message<Res>> ROS2ServiceServer<Req, Res> createServiceServer(
+         String serviceName,
+         Class<Req> requestType,
+         Class<Res> responseType,
+         ROS2ServiceCallback<Req, Res> callback)
    {
-      throw new RuntimeException("Not yet implemented");
+      return createServiceServer(serviceName, requestType, responseType, callback, createServiceQoSProfile());
+   }
+
+   /**
+    * Create a ROS 2 service server with a custom QoS profile.
+    *
+    * @param serviceName  The service name (e.g., "/add_two_ints")
+    * @param requestType  The request message class
+    * @param responseType The response message class
+    * @param callback     The callback to invoke for each incoming request
+    * @param qosProfile   The quality-of-service profile for the service
+    * @param <Req>        The request message type
+    * @param <Res>        The response message type
+    * @return The service server instance
+    */
+   public <Req extends ROS2Message<Req>, Res extends ROS2Message<Res>> ROS2ServiceServer<Req, Res> createServiceServer(
+         String serviceName,
+         Class<Req> requestType,
+         Class<Res> responseType,
+         ROS2ServiceCallback<Req, Res> callback,
+         ROS2QoSProfile qosProfile)
+   {
+      closeLock.readLock().lock();
+      try
+      {
+         if (!closed)
+         {
+            // Topic names ending with "Request" and "Reply" will automatically get "rq" and "rr" DDS prefixes
+            // See getOrCreateTopicData() for prefix logic
+            String formattedServiceName = serviceName.startsWith("/") ? serviceName : "/" + serviceName;
+            String requestTopicName = formattedServiceName + "Request";
+            String responseTopicName = formattedServiceName + "Reply";
+            ROS2Topic<Req> requestTopic = new ROS2Topic<>(requestTopicName, requestType);
+            ROS2Topic<Res> responseTopic = new ROS2Topic<>(responseTopicName, responseType);
+
+            ROS2ServiceServer<Req, Res> server = new ROS2ServiceServer<>(
+                  this, serviceName, requestTopic, responseTopic, callback, responseType, qosProfile);
+
+            synchronized (serviceServers)
+            {
+               serviceServers.add(server);
+            }
+
+            return server;
+         }
+      }
+      finally
+      {
+         closeLock.readLock().unlock();
+      }
+
+      return null;
+   }
+
+   /**
+    * Create a ROS 2 service client.
+    * <p>
+    * The service client publishes requests and waits for responses. Supports both synchronous
+    * and asynchronous (CompletableFuture) call patterns.
+    *
+    * @param serviceName  The service name (e.g., "/add_two_ints")
+    * @param requestType  The request message class (e.g., AddTwoInts_Request.class)
+    * @param responseType The response message class (e.g., AddTwoInts_Response.class)
+    * @param <Req>        The request message type
+    * @param <Res>        The response message type
+    * @return The service client instance
+    */
+   public <Req extends ROS2Message<Req>, Res extends ROS2Message<Res>> ROS2ServiceClient<Req, Res> createServiceClient(
+         String serviceName,
+         Class<Req> requestType,
+         Class<Res> responseType)
+   {
+      return createServiceClient(serviceName, requestType, responseType, createServiceQoSProfile());
+   }
+
+   /**
+    * Create a ROS 2 service client with a custom QoS profile.
+    *
+    * @param serviceName  The service name (e.g., "/add_two_ints")
+    * @param requestType  The request message class
+    * @param responseType The response message class
+    * @param qosProfile   The quality-of-service profile for the service
+    * @param <Req>        The request message type
+    * @param <Res>        The response message type
+    * @return The service client instance
+    */
+   public <Req extends ROS2Message<Req>, Res extends ROS2Message<Res>> ROS2ServiceClient<Req, Res> createServiceClient(
+         String serviceName,
+         Class<Req> requestType,
+         Class<Res> responseType,
+         ROS2QoSProfile qosProfile)
+   {
+      closeLock.readLock().lock();
+      try
+      {
+         if (!closed)
+         {
+            String formattedServiceName = serviceName.startsWith("/") ? serviceName : "/" + serviceName;
+            ROS2Topic<Req> requestTopic = new ROS2Topic<>(formattedServiceName + "Request", requestType);
+            ROS2Topic<Res> responseTopic = new ROS2Topic<>(formattedServiceName + "Reply", responseType);
+
+            ROS2ServiceClient<Req, Res> client = new ROS2ServiceClient<>(
+                  this, serviceName, requestTopic, responseTopic, qosProfile);
+
+            synchronized (serviceClients)
+            {
+               serviceClients.add(client);
+            }
+
+            return client;
+         }
+      }
+      finally
+      {
+         closeLock.readLock().unlock();
+      }
+
+      return null;
+   }
+
+   /**
+    * Destroy a {@link ROS2ServiceServer}.
+    *
+    * @param server the service server to destroy.
+    * @return true if the node contained the server, and it has been removed.
+    */
+   public boolean destroyServiceServer(ROS2ServiceServer<?, ?> server)
+   {
+      boolean removed = false;
+
+      closeLock.readLock().lock();
+      try
+      {
+         if (!closed)
+         {
+            synchronized (serviceServers)
+            {
+               removed = serviceServers.remove(server);
+            }
+
+            if (removed)
+            {
+               server.close(fastddsParticipant);
+            }
+         }
+      }
+      finally
+      {
+         closeLock.readLock().unlock();
+      }
+
+      return removed;
+   }
+
+   /**
+    * Destroy a {@link ROS2ServiceClient}.
+    *
+    * @param client the service client to destroy.
+    * @return true if the node contained the client, and it has been removed.
+    */
+   public boolean destroyServiceClient(ROS2ServiceClient<?, ?> client)
+   {
+      boolean removed = false;
+
+      closeLock.readLock().lock();
+      try
+      {
+         if (!closed)
+         {
+            synchronized (serviceClients)
+            {
+               removed = serviceClients.remove(client);
+            }
+
+            if (removed)
+            {
+               client.close(fastddsParticipant);
+            }
+         }
+      }
+      finally
+      {
+         closeLock.readLock().unlock();
+      }
+
+      return removed;
+   }
+
+   /**
+    * Creates the default QoS profile for ROS 2 services.
+    * Services use RELIABLE reliability and VOLATILE durability.
+    *
+    * @return A QoS profile suitable for services
+    */
+   private static ROS2QoSProfile createServiceQoSProfile()
+   {
+      ROS2QoSProfile qos = new ROS2QoSProfile();
+      qos.reliability(ROS2QoSProfile.Reliability.RELIABLE);
+      qos.durability(ROS2QoSProfile.Durability.VOLATILE);
+      qos.history(ROS2QoSProfile.History.KEEP_LAST);
+      qos.depth(10);
+      return qos;
    }
 
    public Object declareParameter(String name, Object value)
@@ -655,6 +922,26 @@ public class ROS2Node implements Closeable
 
       if (!wasClosed)
       {
+         // Close service servers first (they hold publishers and subscriptions internally)
+         synchronized (serviceServers)
+         {
+            for (ROS2ServiceServer<?, ?> server : serviceServers)
+            {
+               server.close(fastddsParticipant);
+            }
+            serviceServers.clear();
+         }
+
+         // Close service clients (they hold publishers and subscriptions internally)
+         synchronized (serviceClients)
+         {
+            for (ROS2ServiceClient<?, ?> client : serviceClients)
+            {
+               client.close(fastddsParticipant);
+            }
+            serviceClients.clear();
+         }
+
          synchronized (publishers)
          {
             // Delete publishers
