@@ -98,6 +98,11 @@ public class ROS2Publisher<T extends ROS2Message<T>> implements MessageStatistic
 
    public void publish(T message)
    {
+      publish(message, null);
+   }
+
+   public void publish(T message, org.bytedeco.javacpp.Pointer writeParams)
+   {
       closeLock.readLock().lock();
       try
       {
@@ -125,7 +130,14 @@ public class ROS2Publisher<T extends ROS2Message<T>> implements MessageStatistic
                topicDataWrapper.data_ptr().put(writeBuffer.getBufferUnsafe().array(), 0, payloadSizeBytes);
             }
 
-            retcodePrintOnError(fastddsjava_datawriter_write(fastddsDataWriter, topicDataWrapper));
+            if (writeParams != null)
+            {
+               retcodePrintOnError(fastddsjava_datawriter_write_w_params(fastddsDataWriter, topicDataWrapper, writeParams));
+            }
+            else
+            {
+               retcodePrintOnError(fastddsjava_datawriter_write(fastddsDataWriter, topicDataWrapper));
+            }
 
             recordStatistics(message, payloadSizeBytes, System.currentTimeMillis());
          }

@@ -200,8 +200,54 @@ int64_t fastddsjava_sampleinfo_reception_timestamp_to_ns(void* info_) {
 
 bool fastddsjava_sampleinfo_valid_data(void* info_) {
     eprosima::fastdds::dds::SampleInfo* info = static_cast<eprosima::fastdds::dds::SampleInfo*>(info_);
-
     return info->valid_data;
+}
+
+void* fastddsjava_create_writeparams() {
+    return new eprosima::fastdds::rtps::WriteParams();
+}
+
+void fastddsjava_delete_writeparams(void* params_) {
+    eprosima::fastdds::rtps::WriteParams* params = static_cast<eprosima::fastdds::rtps::WriteParams*>(params_);
+    delete params;
+}
+
+void fastddsjava_sampleinfo_get_sample_identity(void* info_, void* identity_out_) {
+    eprosima::fastdds::dds::SampleInfo* info = static_cast<eprosima::fastdds::dds::SampleInfo*>(info_);
+    eprosima::fastdds::rtps::SampleIdentity* identity_out = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_out_);
+    *identity_out = info->sample_identity;
+}
+
+void fastddsjava_sampleinfo_get_related_sample_identity(void* info_, void* identity_out_) {
+    eprosima::fastdds::dds::SampleInfo* info = static_cast<eprosima::fastdds::dds::SampleInfo*>(info_);
+    eprosima::fastdds::rtps::SampleIdentity* identity_out = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_out_);
+    *identity_out = info->related_sample_identity;
+}
+
+void fastddsjava_writeparams_set_related_sample_identity(void* params_, void* identity_) {
+    eprosima::fastdds::rtps::WriteParams* params = static_cast<eprosima::fastdds::rtps::WriteParams*>(params_);
+    eprosima::fastdds::rtps::SampleIdentity* identity = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_);
+    params->related_sample_identity(*identity);
+}
+
+void fastddsjava_writeparams_set_sample_identity(void* params_, void* identity_) {
+    eprosima::fastdds::rtps::WriteParams* params = static_cast<eprosima::fastdds::rtps::WriteParams*>(params_);
+    eprosima::fastdds::rtps::SampleIdentity* identity = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_);
+    params->sample_identity(*identity);
+}
+
+void* fastddsjava_create_sampleidentity() {
+    return new eprosima::fastdds::rtps::SampleIdentity();
+}
+
+void fastddsjava_delete_sampleidentity(void* identity_) {
+    eprosima::fastdds::rtps::SampleIdentity* identity = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_);
+    delete identity;
+}
+
+bool fastddsjava_sampleidentity_is_unknown(void* identity_) {
+    eprosima::fastdds::rtps::SampleIdentity* identity = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_);
+    return *identity == eprosima::fastdds::rtps::SampleIdentity::unknown();
 }
 
 /*
@@ -295,6 +341,13 @@ uint32_t fastddsjava_datawriter_write(void* writer_, fastddsjava_TopicDataWrappe
     eprosima::fastdds::dds::DataWriter* writer = static_cast<eprosima::fastdds::dds::DataWriter*>(writer_);
 
     return writer->write(data);
+}
+
+uint32_t fastddsjava_datawriter_write_w_params(void* writer_, fastddsjava_TopicDataWrapper* data, void* params_) {
+    eprosima::fastdds::dds::DataWriter* writer = static_cast<eprosima::fastdds::dds::DataWriter*>(writer_);
+    eprosima::fastdds::rtps::WriteParams* params = static_cast<eprosima::fastdds::rtps::WriteParams*>(params_);
+
+    return writer->write(data, *params);
 }
 
 /*

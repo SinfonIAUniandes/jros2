@@ -78,7 +78,8 @@ public class fastddsjavaInfoMapper implements InfoMapper
       infoMap.put(new Info("std::vector<uint8_t>").pointerTypes("ByteVector").define());
 
       infoMap.put(new Info("eprosima::fastdds::rtps::InstanceHandle_t", "InstanceHandle_t").skip());
-      infoMap.put(new Info("eprosima::fastdds::rtps::SampleIdentity").skip());
+      infoMap.put(new Info("eprosima::fastdds::rtps::SampleIdentity"));
+      infoMap.put(new Info("eprosima::fastdds::rtps::WriteParams"));
 
       // Callbacks
       infoMap.put(new Info("fastddsjava_DataReaderListener::fastddsjava_OnDataCallback").pointerTypes("fastddsjava_OnDataCallback"));

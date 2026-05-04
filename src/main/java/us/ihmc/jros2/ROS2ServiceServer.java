@@ -119,12 +119,15 @@ public class ROS2ServiceServer<Request extends ROS2Message<Request>, Response ex
     */
    private void handleRequests()
    {
+      Pointer sampleIdentity = us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_create_sampleidentity();
+      Pointer writeParams = us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_create_writeparams();
+
       while (running.get() && !Thread.currentThread().isInterrupted())
       {
          try
          {
-            Request request = requestSubscription.read();
-            if (request != null)
+            Request request = ROS2Message.createInstance(requestSubscription.getTopicType());
+            if (requestSubscription.read(request, sampleIdentity))
             {
                closeLock.readLock().lock();
                try
@@ -139,7 +142,8 @@ public class ROS2ServiceServer<Request extends ROS2Message<Request>, Response ex
                         callback.handleRequest(request, response);
 
                         // Send response back
-                        responsePublisher.publish(response);
+                        us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_writeparams_set_related_sample_identity(writeParams, sampleIdentity);
+                        responsePublisher.publish(response, writeParams);
                      }
                   }
                }
@@ -167,6 +171,9 @@ public class ROS2ServiceServer<Request extends ROS2Message<Request>, Response ex
             }
          }
       }
+      
+      us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_delete_writeparams(writeParams);
+      us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_delete_sampleidentity(sampleIdentity);
    }
 
    /**

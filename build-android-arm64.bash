@@ -8,6 +8,8 @@ set -e
 if [ -z "$ANDROID_NDK" ]; then
   if [ -d "$HOME/Android/Sdk/ndk" ]; then
     export ANDROID_NDK=$(ls -d $HOME/Android/Sdk/ndk/* 2>/dev/null | head -1)
+  elif [ -d "$HOME/AppData/Local/Android/Sdk/ndk" ]; then
+    export ANDROID_NDK=$(ls -d $HOME/AppData/Local/Android/Sdk/ndk/* 2>/dev/null | head -1)
   fi
 
   if [ -z "$ANDROID_NDK" ]; then
@@ -15,6 +17,11 @@ if [ -z "$ANDROID_NDK" ]; then
     echo "Example: export ANDROID_NDK=/path/to/android-sdk/ndk/30.0.14904198"
     exit 1
   fi
+fi
+
+if [ -d "$HOME/AppData/Local/Android/Sdk/cmake" ]; then
+  CMAKE_BIN=$(ls -d $HOME/AppData/Local/Android/Sdk/cmake/*/bin 2>/dev/null | tail -1)
+  export PATH="$CMAKE_BIN:$PATH"
 fi
 
 echo "Using Android NDK: $ANDROID_NDK"

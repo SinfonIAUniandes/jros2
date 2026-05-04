@@ -232,6 +232,11 @@ public class ROS2Subscription<T extends ROS2Message<T>> implements ROS2MessageRe
    @Override
    public boolean read(T data)
    {
+       return read(data, null);
+   }
+
+   public boolean read(T data, org.bytedeco.javacpp.Pointer sampleInfo)
+   {
       boolean read = false;
 
       closeLock.readLock().lock();
@@ -258,6 +263,11 @@ public class ROS2Subscription<T extends ROS2Message<T>> implements ROS2MessageRe
                   // Deserialize sample into Java ROS2Message
                   readBuffer.readPayloadHeader();
                   data.deserialize(readBuffer);
+                  
+                  if (sampleInfo != null)
+                  {
+                      us.ihmc.fastddsjava.pointers.fastddsjava.fastddsjava_sampleinfo_get_sample_identity(fastddsUserSampleInfo, sampleInfo);
+                  }
 
                   read = true;
                }

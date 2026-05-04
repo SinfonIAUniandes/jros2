@@ -39,7 +39,11 @@ FASTDDS_VERSION=3.2.2
 # Using git for libtinyxml and libasio submodules
 git clone https://github.com/eProsima/Fast-DDS.git -b v$FASTDDS_VERSION Fast-DDS-$FASTDDS_VERSION
 
-INSTALL_DIR=$(pwd)
+if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "win32" ]]; then
+  INSTALL_DIR=$(pwd -W)
+else
+  INSTALL_DIR=$(pwd)
+fi
 
 COMPILER_ARGS=""
 JAVACPP_COMP_ARGS=""
@@ -169,7 +173,21 @@ cp us/ihmc/fastddsjava/pointers/*.java ../src/main/java/us/ihmc/fastddsjava/poin
 #### JNI compilation ####
 if [ "$ANDROID_COMPILE" == "1" ]; then
   # For Android, we need to specify the compiler path and additional flags
-  ANDROID_TOOLCHAIN_BIN="$ANDROID_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin"
+  # Determine host platform for toolchain
+  if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "win32" ]]; then
+    HOST_TOOLCHAIN="windows-x86_64"
+    CLANG_BIN_EXT=".cmd"
+    EXE_EXT=".exe"
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    HOST_TOOLCHAIN="darwin-x86_64"
+    CLANG_BIN_EXT=""
+    EXE_EXT=""
+  else
+    HOST_TOOLCHAIN="linux-x86_64"
+    CLANG_BIN_EXT=""
+    EXE_EXT=""
+  fi
+  ANDROID_TOOLCHAIN_BIN="$ANDROID_NDK/toolchains/llvm/prebuilt/$HOST_TOOLCHAIN/bin"
   if [ "$ANDROID_ABI" == "arm64-v8a" ]; then
     ANDROID_COMPILER_PREFIX="aarch64-linux-android"
   elif [ "$ANDROID_ABI" == "armeabi-v7a" ]; then
@@ -180,7 +198,7 @@ if [ "$ANDROID_COMPILE" == "1" ]; then
     ANDROID_COMPILER_PREFIX="i686-linux-android"
   fi
   # Set environment for Android compilation
-  JAVACPP_CXX="${ANDROID_TOOLCHAIN_BIN}/${ANDROID_COMPILER_PREFIX}${ANDROID_API_LEVEL}-clang++"
+  JAVACPP_CXX="${ANDROID_TOOLCHAIN_BIN}/${ANDROID_COMPILER_PREFIX}${ANDROID_API_LEVEL}-clang++${CLANG_BIN_EXT}"
 
   # First generate the code
   java -jar javacpp.jar us/ihmc/fastddsjava/pointers/*.java $JAVACPP_COMP_ARGS \
@@ -275,15 +293,15 @@ if [ "$ANDROID_COMPILE" == "1" ]; then
   # Android libraries without version numbers
   if [ -f "install/lib/libfastcdr.so" ]; then
     cp -f install/lib/libfastcdr.so "$ANDROID_GEN_PATH/libfastcdr.so"
-    ${ANDROID_NDK}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip "$ANDROID_GEN_PATH/libfastcdr.so"
+    ${ANDROID_NDK}/toolchains/llvm/prebuilt/$HOST_TOOLCHAIN/bin/llvm-strip${EXE_EXT} "$ANDROID_GEN_PATH/libfastcdr.so"
   fi
   if [ -f "install/lib/libfastdds.so" ]; then
     cp -f install/lib/libfastdds.so "$ANDROID_GEN_PATH/libfastdds.so"
-    ${ANDROID_NDK}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip "$ANDROID_GEN_PATH/libfastdds.so"
+    ${ANDROID_NDK}/toolchains/llvm/prebuilt/$HOST_TOOLCHAIN/bin/llvm-strip${EXE_EXT} "$ANDROID_GEN_PATH/libfastdds.so"
   fi
   if [ -f "javainstall/libjnifastddsjava.so" ]; then
     cp -f javainstall/libjnifastddsjava.so "$ANDROID_GEN_PATH/libjnifastddsjava.so"
-    ${ANDROID_NDK}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip "$ANDROID_GEN_PATH/libjnifastddsjava.so"
+    ${ANDROID_NDK}/toolchains/llvm/prebuilt/$HOST_TOOLCHAIN/bin/llvm-strip${EXE_EXT} "$ANDROID_GEN_PATH/libjnifastddsjava.so"
   fi
 fi
 popd

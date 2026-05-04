@@ -119,6 +119,19 @@ public static native Pointer fastddsjava_create_datawriter(Pointer publisher_, P
 public static native @Cast("uint32_t") int fastddsjava_delete_datawriter(Pointer publisher_, Pointer writer_);
 
 public static native @Cast("uint32_t") int fastddsjava_datawriter_write(Pointer writer_, fastddsjava_TopicDataWrapper data);
+public static native @Cast("uint32_t") int fastddsjava_datawriter_write_w_params(Pointer writer_, fastddsjava_TopicDataWrapper data, Pointer params_);
+
+public static native Pointer fastddsjava_create_writeparams();
+public static native void fastddsjava_delete_writeparams(Pointer params_);
+public static native void fastddsjava_writeparams_set_related_sample_identity(Pointer params_, Pointer identity_);
+public static native void fastddsjava_writeparams_set_sample_identity(Pointer params_, Pointer identity_);
+
+public static native Pointer fastddsjava_create_sampleidentity();
+public static native void fastddsjava_delete_sampleidentity(Pointer identity_);
+public static native @Cast("bool") boolean fastddsjava_sampleidentity_is_unknown(Pointer identity_);
+
+public static native void fastddsjava_sampleinfo_get_sample_identity(Pointer info_, Pointer identity_out_);
+public static native void fastddsjava_sampleinfo_get_related_sample_identity(Pointer info_, Pointer identity_out_);
 
 /*
  *  Returns eprosima::fastdds::dds::DataReader*
