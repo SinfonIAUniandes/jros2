@@ -2,6 +2,7 @@
 #define FASTDDSJAVA_H
 
 #include <fastdds/rtps/common/SerializedPayload.hpp>
+#include <fastdds/rtps/common/WriteParams.hpp>
 #include <fastdds/dds/topic/TopicDataType.hpp>
 #include <fastdds/dds/topic/TypeSupport.hpp>
 #include <fastdds/dds/domain/DomainParticipant.hpp>
@@ -216,6 +217,11 @@ void fastddsjava_sampleinfo_get_sample_identity(void* info_, void* identity_out_
     eprosima::fastdds::dds::SampleInfo* info = static_cast<eprosima::fastdds::dds::SampleInfo*>(info_);
     eprosima::fastdds::rtps::SampleIdentity* identity_out = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_out_);
     *identity_out = info->sample_identity;
+    printf("[JROS2] Extracted SampleIdentity from request: GUID %x-%x-%x..., SeqNum %lld\n",
+        info->sample_identity.writer_guid().guidPrefix.value[0],
+        info->sample_identity.writer_guid().guidPrefix.value[1],
+        info->sample_identity.writer_guid().guidPrefix.value[2],
+        (long long)info->sample_identity.sequence_number().to64long());
 }
 
 void fastddsjava_sampleinfo_get_related_sample_identity(void* info_, void* identity_out_) {
@@ -228,6 +234,11 @@ void fastddsjava_writeparams_set_related_sample_identity(void* params_, void* id
     eprosima::fastdds::rtps::WriteParams* params = static_cast<eprosima::fastdds::rtps::WriteParams*>(params_);
     eprosima::fastdds::rtps::SampleIdentity* identity = static_cast<eprosima::fastdds::rtps::SampleIdentity*>(identity_);
     params->related_sample_identity(*identity);
+    printf("[JROS2] Attached RelatedSampleIdentity to reply: GUID %x-%x-%x..., SeqNum %lld\n",
+        identity->writer_guid().guidPrefix.value[0],
+        identity->writer_guid().guidPrefix.value[1],
+        identity->writer_guid().guidPrefix.value[2],
+        (long long)identity->sequence_number().to64long());
 }
 
 void fastddsjava_writeparams_set_sample_identity(void* params_, void* identity_) {

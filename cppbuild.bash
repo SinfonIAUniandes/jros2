@@ -59,8 +59,8 @@ if [ "$ANDROID_COMPILE" == "1" ]; then
   # ANDROID_ABI=x86_64  # Commented out - use ANDROID_ABI env var or default arm64-v8a
   ANDROID_API_LEVEL=${ANDROID_API_LEVEL:-24}
   # Add flags to disable warnings that Android NDK clang treats as errors
-  ANDROID_CXX_FLAGS="-Wno-error=gnu-offsetof-extensions"
-  COMPILER_ARGS="-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake -DANDROID_ABI=$ANDROID_ABI -DANDROID_PLATFORM=android-$ANDROID_API_LEVEL -DANDROID_NDK=$ANDROID_NDK -DCMAKE_CXX_FLAGS=\"$ANDROID_CXX_FLAGS\""
+  ANDROID_CXX_FLAGS="-Wno-error=gnu-offsetof-extensions -Wno-error=deprecated-literal-operator -Wno-error=nonnull"
+  COMPILER_ARGS="-G Ninja -DCMAKE_MAKE_PROGRAM=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/cmake/4.1.2/bin/ninja.exe -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake -DANDROID_ABI=$ANDROID_ABI -DANDROID_PLATFORM=android-$ANDROID_API_LEVEL -DANDROID_NDK=$ANDROID_NDK -DCMAKE_CXX_FLAGS=$ANDROID_CXX_FLAGS"
   JAVACPP_COMP_ARGS="-properties android-$ANDROID_ABI -Dplatform=android-$ANDROID_ABI"
 elif [ "$MAC_COMPILE_X86_64" == "1" ]; then
   # Export compiler flags so cmake and all subproject builds pick up the target arch
@@ -92,10 +92,10 @@ fi
 pushd .
 cd foonathan_memory_vendor-$FOONATHAN_MEMORY_VENDOR_VERSION
 
-# Patch foonathan_memory_vendor CMakeLists.txt to propagate CMAKE_ANDROID_FLAGS for Android
+# Patch foonathan_memory_vendor CMakeLists.txt to propagate ANDROID_CXX_FLAGS for Android
 if [ "$ANDROID_COMPILE" == "1" ]; then
   if ! grep -q "CMAKE_ANDROID_FLAGS_PATCH" CMakeLists.txt; then
-    sed -i "/list(APPEND extra_cmake_args -DCMAKE_POSITION_INDEPENDENT_CODE=\${CMAKE_POSITION_INDEPENDENT_CODE})/a\  # CMAKE_ANDROID_FLAGS_PATCH\n  list(APPEND extra_cmake_args \"-DCMAKE_CXX_FLAGS=$CMAKE_ANDROID_FLAGS\")" CMakeLists.txt
+    sed -i "/list(APPEND extra_cmake_args -DCMAKE_POSITION_INDEPENDENT_CODE=\${CMAKE_POSITION_INDEPENDENT_CODE})/a\  # CMAKE_ANDROID_FLAGS_PATCH\n  list(APPEND extra_cmake_args \"-DCMAKE_CXX_FLAGS=$ANDROID_CXX_FLAGS\")" CMakeLists.txt
   fi
 fi
 
@@ -104,7 +104,7 @@ cd build
 cmake .. $COMPILER_ARGS -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install
 if [ "$ANDROID_COMPILE" == "1" ]; then
   # Modify CMakeCache to add warning suppression flags, then reconfigure
-  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$CMAKE_ANDROID_FLAGS /" CMakeCache.txt
+  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$ANDROID_CXX_FLAGS /" CMakeCache.txt
   cmake .. $COMPILER_ARGS -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install
 fi
 cmake --build . --config Release --target install
@@ -118,7 +118,7 @@ cd build
 cmake .. $COMPILER_ARGS -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install
 if [ "$ANDROID_COMPILE" == "1" ]; then
   # Modify CMakeCache to add warning suppression flags, then reconfigure
-  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$CMAKE_ANDROID_FLAGS /" CMakeCache.txt
+  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$ANDROID_CXX_FLAGS /" CMakeCache.txt
   cmake .. $COMPILER_ARGS -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install
 fi
 cmake --build . --config Release --target install
@@ -128,12 +128,16 @@ popd
 pushd .
 cd Fast-DDS-$FASTDDS_VERSION
 git submodule update --init --recursive
+
+# Patch TypeObjectRegistry.cpp to fix -Wnonnull compilation error with Clang 21
+sed -i 's/param_value = TypeObjectUtils::build_annotation_parameter_value(!value.empty() ? value : 0);/param_value = TypeObjectUtils::build_annotation_parameter_value(!value.empty() ? value : "");/' src/cpp/fastdds/xtypes/type_representation/TypeObjectRegistry.cpp
+
 mkdir -p build
 cd build
 if [ "$ANDROID_COMPILE" == "1" ]; then
   cmake .. $COMPILER_ARGS -DQNX=OFF -DNO_TLS=ON -DSECURITY=OFF -DTHIRDPARTY_TinyXML2=FORCE -DTHIRDPARTY_Asio=FORCE -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install -Dfastcdr_DIR=$INSTALL_DIR/install/lib/cmake/fastcdr -Dfoonathan_memory_DIR=$INSTALL_DIR/install/lib/foonathan_memory/cmake
   # Append warning suppression flags to CMAKE_CXX_FLAGS in the cache after initial configuration
-  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$CMAKE_ANDROID_FLAGS /" CMakeCache.txt
+  sed -i "s/CMAKE_CXX_FLAGS:STRING=/CMAKE_CXX_FLAGS:STRING=$ANDROID_CXX_FLAGS /" CMakeCache.txt
   cmake .. $COMPILER_ARGS -DQNX=OFF -DNO_TLS=ON -DSECURITY=OFF -DTHIRDPARTY_TinyXML2=FORCE -DTHIRDPARTY_Asio=FORCE -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install -Dfastcdr_DIR=$INSTALL_DIR/install/lib/cmake/fastcdr -Dfoonathan_memory_DIR=$INSTALL_DIR/install/lib/foonathan_memory/cmake
 else
   cmake .. $COMPILER_ARGS -DQNX=OFF -DNO_TLS=ON -DSECURITY=OFF -DTHIRDPARTY_TinyXML2=FORCE -DTHIRDPARTY_Asio=FORCE -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/install -DCMAKE_PREFIX_PATH=$INSTALL_DIR/install

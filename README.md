@@ -110,3 +110,37 @@ data: 'Hello world: 2'
 ---
 [...]
 ```
+
+## Compiling from Source (Android / ARM64)
+
+If you need to make changes to the native middleware (Fast-DDS) or the JavaCPP wrapper bindings, you must recompile the C++ libraries before building the Java project.
+
+### 1. C++ / Native Build
+
+The native cross-compilation pipeline is managed via bash scripts that download the C++ dependencies and use the Android NDK to compile them.
+
+**Prerequisites:**
+- Android NDK (e.g., `30.0.14904198`) installed via Android Studio.
+- CMake installed via Android SDK.
+- Git Bash (or a similar Unix shell on Windows).
+
+Run the build script from the repository root:
+```bash
+./run_build.bash
+```
+*Note: This script invokes `build-android-arm64.bash` which wipes the `cppbuild` directory, runs `cppbuild.bash` to compile Fast-CDR and Fast-DDS for `arm64-v8a`, and generates the JNI bindings (`libjnifastddsjava.so`). Finally, it publishes the Java AAR.*
+
+### 2. Java / Gradle Build
+
+If you only made changes to the Java source code (and not the native layer), you can skip the C++ compilation and directly build the Java libraries.
+
+To publish the desktop JAR to Maven Local:
+```bash
+./gradlew publishToMavenLocal
+```
+
+To publish the Android AAR (which packages the `.so` JNI libraries):
+```bash
+cd android
+../gradlew publishReleasePublicationToMavenLocal
+```

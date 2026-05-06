@@ -1,0 +1,683 @@
+Using Android NDK: /c/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198
+Cleaning previous build...
+Building for Android ARM64-v8a...
+~/Desktop/Cuevas/WearROS2/jros2 ~/Desktop/Cuevas/WearROS2/jros2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 10593    0 10593    0     0  23113      0 --:--:-- --:--:-- --:--:-- 23230
+foonathan_memory_vendor-1.3.1/
+foonathan_memory_vendor-1.3.1/.gitignore
+foonathan_memory_vendor-1.3.1/CHANGELOG.rst
+foonathan_memory_vendor-1.3.1/CMakeLists.txt
+foonathan_memory_vendor-1.3.1/CMakeLists.txt.patch
+foonathan_memory_vendor-1.3.1/CONTRIBUTING.md
+foonathan_memory_vendor-1.3.1/LICENSE
+foonathan_memory_vendor-1.3.1/QUALITY_DECLARATION.md
+foonathan_memory_vendor-1.3.1/README.md
+foonathan_memory_vendor-1.3.1/foonathan_memory_vendorConfig.cmake.in
+foonathan_memory_vendor-1.3.1/package.xml
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  927k    0  927k    0     0  1037k      0 --:--:-- --:--:-- --:--:-- 1038k100 3051k    0 3051k    0     0  2664k      0 --:--:--  0:00:01 --:--:-- 2667k
+Fast-CDR-2.3.0/
+Fast-CDR-2.3.0/.gitattributes
+Fast-CDR-2.3.0/.github/
+Fast-CDR-2.3.0/.github/dco.yml
+Fast-CDR-2.3.0/.github/pull_request_template.md
+Fast-CDR-2.3.0/.github/workflows/
+Fast-CDR-2.3.0/.github/workflows/codeql-analysis.yml
+Fast-CDR-2.3.0/.github/workflows/config/
+Fast-CDR-2.3.0/.github/workflows/config/build.meta
+Fast-CDR-2.3.0/.github/workflows/config/test.meta
+Fast-CDR-2.3.0/.github/workflows/config/test.repos
+Fast-CDR-2.3.0/.github/workflows/mac-ci.yml
+Fast-CDR-2.3.0/.github/workflows/mirror.yml
+Fast-CDR-2.3.0/.github/workflows/nightly-mac-ci.yml
+Fast-CDR-2.3.0/.github/workflows/nightly-ubuntu-ci.yml
+Fast-CDR-2.3.0/.github/workflows/nightly-windows-ci.yml
+Fast-CDR-2.3.0/.github/workflows/reusable-ci.yml
+Fast-CDR-2.3.0/.github/workflows/ubuntu-ci.yml
+Fast-CDR-2.3.0/.github/workflows/windows-ci.yml
+Fast-CDR-2.3.0/.gitignore
+Fast-CDR-2.3.0/.gitmodules
+Fast-CDR-2.3.0/.ycm_extra_conf.py
+Fast-CDR-2.3.0/CMakeLists.txt
+Fast-CDR-2.3.0/CONTRIBUTING.md
+Fast-CDR-2.3.0/CTestJenkins.cmake
+Fast-CDR-2.3.0/LICENSE
+Fast-CDR-2.3.0/PLATFORM_SUPPORT.md
+Fast-CDR-2.3.0/QUALITY.md
+Fast-CDR-2.3.0/README.md
+Fast-CDR-2.3.0/RELEASE_SUPPORT.md
+Fast-CDR-2.3.0/VERSIONING.md
+Fast-CDR-2.3.0/cmake/
+Fast-CDR-2.3.0/cmake/common/
+Fast-CDR-2.3.0/cmake/common/check_configuration.cmake
+Fast-CDR-2.3.0/cmake/common/find_or_add_gtest.cmake
+Fast-CDR-2.3.0/cmake/packaging/
+Fast-CDR-2.3.0/cmake/packaging/Config.cmake.in
+Fast-CDR-2.3.0/cmake/packaging/windows/
+Fast-CDR-2.3.0/cmake/packaging/windows/fastcdr-config.cmake
+Fast-CDR-2.3.0/cmake/testing/
+Fast-CDR-2.3.0/cmake/testing/GoogleTest.cmake
+Fast-CDR-2.3.0/cmake/testing/generate_google_test_win_wrapper.cmake
+Fast-CDR-2.3.0/colcon.pkg
+Fast-CDR-2.3.0/doc/
+Fast-CDR-2.3.0/doc/README.html.in
+Fast-CDR-2.3.0/doc/Users Manual.odt
+Fast-CDR-2.3.0/doc/information/
+Fast-CDR-2.3.0/doc/information/standards/
+Fast-CDR-2.3.0/doc/information/standards/10-11-01.pdf
+Fast-CDR-2.3.0/doc/information/standards/11-11-02-1.pdf
+Fast-CDR-2.3.0/doc/information/standards/13-02-04.pdf
+Fast-CDR-2.3.0/doxyfile.in
+Fast-CDR-2.3.0/fastcdr.repos
+Fast-CDR-2.3.0/include/
+Fast-CDR-2.3.0/include/fastcdr/
+Fast-CDR-2.3.0/include/fastcdr/Cdr.h
+Fast-CDR-2.3.0/include/fastcdr/CdrEncoding.hpp
+Fast-CDR-2.3.0/include/fastcdr/CdrSizeCalculator.hpp
+Fast-CDR-2.3.0/include/fastcdr/FastBuffer.h
+Fast-CDR-2.3.0/include/fastcdr/FastCdr.h
+Fast-CDR-2.3.0/include/fastcdr/cdr/
+Fast-CDR-2.3.0/include/fastcdr/cdr/fixed_size_string.hpp
+Fast-CDR-2.3.0/include/fastcdr/config.h.in
+Fast-CDR-2.3.0/include/fastcdr/config/
+Fast-CDR-2.3.0/include/fastcdr/config/doxygen_modules.h
+Fast-CDR-2.3.0/include/fastcdr/detail/
+Fast-CDR-2.3.0/include/fastcdr/detail/container_recursive_inspector.hpp
+Fast-CDR-2.3.0/include/fastcdr/eProsima_auto_link.h
+Fast-CDR-2.3.0/include/fastcdr/exceptions/
+Fast-CDR-2.3.0/include/fastcdr/exceptions/BadOptionalAccessException.hpp
+Fast-CDR-2.3.0/include/fastcdr/exceptions/BadParamException.h
+Fast-CDR-2.3.0/include/fastcdr/exceptions/Exception.h
+Fast-CDR-2.3.0/include/fastcdr/exceptions/LockedExternalAccessException.hpp
+Fast-CDR-2.3.0/include/fastcdr/exceptions/NotEnoughMemoryException.h
+Fast-CDR-2.3.0/include/fastcdr/fastcdr_dll.h
+Fast-CDR-2.3.0/include/fastcdr/xcdr/
+Fast-CDR-2.3.0/include/fastcdr/xcdr/MemberId.hpp
+Fast-CDR-2.3.0/include/fastcdr/xcdr/detail/
+Fast-CDR-2.3.0/include/fastcdr/xcdr/detail/optional.hpp
+Fast-CDR-2.3.0/include/fastcdr/xcdr/external.hpp
+Fast-CDR-2.3.0/include/fastcdr/xcdr/optional.hpp
+Fast-CDR-2.3.0/package.xml
+Fast-CDR-2.3.0/resources/
+Fast-CDR-2.3.0/resources/images/
+Fast-CDR-2.3.0/resources/images/github_banner_fastcdr.png
+Fast-CDR-2.3.0/src/
+Fast-CDR-2.3.0/src/cpp/
+Fast-CDR-2.3.0/src/cpp/CMakeLists.txt
+Fast-CDR-2.3.0/src/cpp/Cdr.cpp
+Fast-CDR-2.3.0/src/cpp/CdrSizeCalculator.cpp
+Fast-CDR-2.3.0/src/cpp/FastBuffer.cpp
+Fast-CDR-2.3.0/src/cpp/FastCdr.cpp
+Fast-CDR-2.3.0/src/cpp/FastCdr.rc
+Fast-CDR-2.3.0/src/cpp/exceptions/
+Fast-CDR-2.3.0/src/cpp/exceptions/BadOptionalAccessException.cpp
+Fast-CDR-2.3.0/src/cpp/exceptions/BadParamException.cpp
+Fast-CDR-2.3.0/src/cpp/exceptions/Exception.cpp
+Fast-CDR-2.3.0/src/cpp/exceptions/LockedExternalAccessException.cpp
+Fast-CDR-2.3.0/src/cpp/exceptions/NotEnoughMemoryException.cpp
+Fast-CDR-2.3.0/test/
+Fast-CDR-2.3.0/test/CMakeLists.txt
+Fast-CDR-2.3.0/test/cdr/
+Fast-CDR-2.3.0/test/cdr/CMakeLists.txt
+Fast-CDR-2.3.0/test/cdr/ResizeTest.cpp
+Fast-CDR-2.3.0/test/cdr/SimpleTest.cpp
+Fast-CDR-2.3.0/test/cdr/array_as_std_vector.cpp
+Fast-CDR-2.3.0/test/cdr/fixed_size_string.cpp
+Fast-CDR-2.3.0/test/cmake/
+Fast-CDR-2.3.0/test/cmake/CMakeLists.txt
+Fast-CDR-2.3.0/test/cmake/build.cmake
+Fast-CDR-2.3.0/test/cmake/fold.cpp
+Fast-CDR-2.3.0/test/xcdr/
+Fast-CDR-2.3.0/test/xcdr/CMakeLists.txt
+Fast-CDR-2.3.0/test/xcdr/appendable.cpp
+Fast-CDR-2.3.0/test/xcdr/basic_types.cpp
+Fast-CDR-2.3.0/test/xcdr/external.cpp
+Fast-CDR-2.3.0/test/xcdr/final.cpp
+Fast-CDR-2.3.0/test/xcdr/mutable.cpp
+Fast-CDR-2.3.0/test/xcdr/optional.cpp
+Fast-CDR-2.3.0/test/xcdr/utility.hpp
+Fast-CDR-2.3.0/test/xcdr/xcdrv1.cpp
+Fast-CDR-2.3.0/test/xcdr/xcdrv2.cpp
+Fast-CDR-2.3.0/utils/
+Fast-CDR-2.3.0/utils/doxygen/
+Fast-CDR-2.3.0/utils/doxygen/doxyfile
+Fast-CDR-2.3.0/utils/doxygen/doxygenfiles/
+Fast-CDR-2.3.0/utils/doxygen/doxygenfiles/eProsimaLogo.png
+Fast-CDR-2.3.0/utils/doxygen/doxygenfiles/logoEprosimaBlueRTI.gif
+Fast-CDR-2.3.0/utils/doxygen/doxygenfiles/mainpage.dox
+Fast-CDR-2.3.0/utils/doxygen/pages/
+Fast-CDR-2.3.0/utils/doxygen/pages/customdoxygen.css
+Fast-CDR-2.3.0/utils/doxygen/pages/eprosima_footer.html
+Fast-CDR-2.3.0/utils/doxygen/pages/eprosima_header.html
+Fast-CDR-2.3.0/utils/images/
+Fast-CDR-2.3.0/utils/images/icon/
+Fast-CDR-2.3.0/utils/images/icon/eprosima_icon.bmp
+Fast-CDR-2.3.0/utils/images/icon/eprosima_icon.ico
+Fast-CDR-2.3.0/utils/images/logo/
+Fast-CDR-2.3.0/utils/images/logo/eProsimaLogo.jpg
+Fast-CDR-2.3.0/utils/images/logo/eProsimaLogo.png
+Fast-CDR-2.3.0/valgrind.supp
+Fast-CDR-2.3.0/versions.md
+Cloning into 'Fast-DDS-3.2.2'...
+Note: switching to '22e61ddbf1877e213e5f5facb4fb0a9580b7ba91'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:   7% (289/3705)Updating files:   8% (297/3705)Updating files:   8% (305/3705)Updating files:   9% (334/3705)Updating files:  10% (371/3705)Updating files:  11% (408/3705)Updating files:  12% (445/3705)Updating files:  13% (482/3705)Updating files:  14% (519/3705)Updating files:  15% (556/3705)Updating files:  16% (593/3705)Updating files:  17% (630/3705)Updating files:  18% (667/3705)Updating files:  19% (704/3705)Updating files:  20% (741/3705)Updating files:  21% (779/3705)Updating files:  21% (782/3705)Updating files:  22% (816/3705)Updating files:  23% (853/3705)Updating files:  24% (890/3705)Updating files:  25% (927/3705)Updating files:  26% (964/3705)Updating files:  27% (1001/3705)Updating files:  28% (1038/3705)Updating files:  29% (1075/3705)Updating files:  30% (1112/3705)Updating files:  30% (1143/3705)Updating files:  31% (1149/3705)Updating files:  32% (1186/3705)Updating files:  33% (1223/3705)Updating files:  34% (1260/3705)Updating files:  35% (1297/3705)Updating files:  36% (1334/3705)Updating files:  37% (1371/3705)Updating files:  38% (1408/3705)Updating files:  39% (1445/3705)Updating files:  40% (1482/3705)Updating files:  40% (1502/3705)Updating files:  41% (1520/3705)Updating files:  42% (1557/3705)Updating files:  43% (1594/3705)Updating files:  44% (1631/3705)Updating files:  45% (1668/3705)Updating files:  46% (1705/3705)Updating files:  47% (1742/3705)Updating files:  48% (1779/3705)Updating files:  48% (1797/3705)Updating files:  49% (1816/3705)Updating files:  50% (1853/3705)Updating files:  51% (1890/3705)Updating files:  51% (1902/3705)Updating files:  52% (1927/3705)Updating files:  53% (1964/3705)Updating files:  54% (2001/3705)Updating files:  55% (2038/3705)Updating files:  56% (2075/3705)Updating files:  57% (2112/3705)Updating files:  57% (2135/3705)Updating files:  58% (2149/3705)Updating files:  59% (2186/3705)Updating files:  60% (2223/3705)Updating files:  61% (2261/3705)Updating files:  62% (2298/3705)Updating files:  63% (2335/3705)Updating files:  64% (2372/3705)Updating files:  65% (2409/3705)Updating files:  65% (2442/3705)Updating files:  66% (2446/3705)Updating files:  67% (2483/3705)Updating files:  67% (2517/3705)Updating files:  68% (2520/3705)Updating files:  69% (2557/3705)Updating files:  69% (2571/3705)Updating files:  70% (2594/3705)Updating files:  71% (2631/3705)Updating files:  72% (2668/3705)Updating files:  72% (2677/3705)Updating files:  73% (2705/3705)Updating files:  74% (2742/3705)Updating files:  75% (2779/3705)Updating files:  76% (2816/3705)Updating files:  77% (2853/3705)Updating files:  78% (2890/3705)Updating files:  78% (2904/3705)Updating files:  79% (2927/3705)Updating files:  80% (2964/3705)Updating files:  81% (3002/3705)Updating files:  81% (3025/3705)Updating files:  82% (3039/3705)Updating files:  83% (3076/3705)Updating files:  84% (3113/3705)Updating files:  85% (3150/3705)Updating files:  86% (3187/3705)Updating files:  86% (3219/3705)Updating files:  87% (3224/3705)Updating files:  88% (3261/3705)Updating files:  89% (3298/3705)Updating files:  90% (3335/3705)Updating files:  90% (3354/3705)Updating files:  91% (3372/3705)Updating files:  92% (3409/3705)Updating files:  93% (3446/3705)Updating files:  93% (3447/3705)Updating files:  94% (3483/3705)Updating files:  95% (3520/3705)Updating files:  96% (3557/3705)Updating files:  96% (3568/3705)Updating files:  97% (3594/3705)Updating files:  98% (3631/3705)Updating files:  98% (3665/3705)Updating files:  99% (3668/3705)Updating files:  99% (3703/3705)Updating files: 100% (3705/3705)Updating files: 100% (3705/3705), done.
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+-- The C compiler identification is Clang 21.0.0
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (8.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build
+[1/9] Creating directories for 'foo_mem-ext'
+[2/9] Performing download step (git clone) for 'foo_mem-ext'
+Cloning into 'foo_mem-ext'...
+HEAD is now at 0f07757 Release 0.7-3
+[3/9] No update step for 'foo_mem-ext'
+[4/9] No patch step for 'foo_mem-ext'
+[5/9] Performing configure step for 'foo_mem-ext'
+-- The C compiler identification is Clang 21.0.0
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test HAVE_CXX_ATOMIC_NOFLAG
+-- Performing Test HAVE_CXX_ATOMIC_NOFLAG - Success
+-- Getting container node sizes
+-- Configuring done (66.5s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build
+[6/9] Performing build step for 'foo_mem-ext'
+FAILED: foo_mem-ext-prefix/src/foo_mem-ext-stamp/foo_mem-ext-build C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-stamp/foo_mem-ext-build 
+C:\Windows\system32\cmd.exe /C "cd /D C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild\foonathan_memory_vendor-1.3.1\build\foo_mem-ext-prefix\src\foo_mem-ext-build && C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\cmake\4.1.2\bin\cmake.exe --build . && C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\cmake\4.1.2\bin\cmake.exe -E touch C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-stamp/foo_mem-ext-build"
+[1/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/align.cpp.o
+[2/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/assert.cpp.o
+[3/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/debug_helpers.cpp.o
+[4/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/free_list_array.cpp.o
+[5/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/debugging.cpp.o
+[6/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/error.cpp.o
+[7/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/heap_allocator.cpp.o
+[8/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/iteration_allocator.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/iteration_allocator.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/iteration_allocator.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\iteration_allocator.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/iteration_allocator.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/iteration_allocator.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/iteration_allocator.cpp:4:
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/iteration_allocator.hpp:14:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+[9/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/malloc_allocator.cpp.o
+[10/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/memory_arena.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/memory_arena.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/memory_arena.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\memory_arena.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/memory_arena.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_arena.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_arena.cpp:4:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+[11/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/new_allocator.cpp.o
+[12/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/memory_pool.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/memory_pool.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/memory_pool.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\memory_pool.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/memory_pool.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_pool.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_pool.cpp:4:
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_pool.hpp:20:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+[13/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/memory_pool_collection.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/memory_pool_collection.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/memory_pool_collection.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\memory_pool_collection.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/memory_pool_collection.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_pool_collection.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_pool_collection.cpp:4:
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_pool_collection.hpp:19:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+[14/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/memory_stack.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/memory_stack.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/memory_stack.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\memory_stack.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/memory_stack.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_stack.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/memory_stack.cpp:4:
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_stack.hpp:20:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+[15/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/small_free_list.cpp.o
+[16/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/detail/free_list.cpp.o
+[17/22] Building CXX object src/CMakeFiles/foonathan_memory.dir/static_allocator.cpp.o
+FAILED: src/CMakeFiles/foonathan_memory.dir/static_allocator.cpp.o 
+C:\Users\David.DESKTOP-A6NC9IE\AppData\Local\Android\Sdk\ndk\30.0.14904198\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3 -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext-build/src -IC:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -MD -MT src/CMakeFiles/foonathan_memory.dir/static_allocator.cpp.o -MF src\CMakeFiles\foonathan_memory.dir\static_allocator.cpp.o.d -o src/CMakeFiles/foonathan_memory.dir/static_allocator.cpp.o -c C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/static_allocator.cpp
+In file included from C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/src/static_allocator.cpp:8:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:659:46: error: identifier '_KiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  659 |             constexpr std::size_t operator"" _KiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_KiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:664:46: error: identifier '_KB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  664 |             constexpr std::size_t operator"" _KB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_KB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:669:46: error: identifier '_MiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  669 |             constexpr std::size_t operator"" _MiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_MiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:674:46: error: identifier '_MB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  674 |             constexpr std::size_t operator"" _MB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_MB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:679:46: error: identifier '_GiB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  679 |             constexpr std::size_t operator"" _GiB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~~
+      |                                   operator""_GiB
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/foonathan_memory_vendor-1.3.1/build/foo_mem-ext-prefix/src/foo_mem-ext/include/foonathan/memory/memory_arena.hpp:684:46: error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]
+  684 |             constexpr std::size_t operator"" _GB(unsigned long long value) noexcept
+      |                                   ~~~~~~~~~~~^~~
+      |                                   operator""_GB
+6 errors generated.
+ninja: build stopped: subcommand failed.
+ninja: build stopped: subcommand failed.
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+-- Setting build type to 'Release' as none was specified.
+-- Tests not compiled by default
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring Fast CDR
+-- Version: 2.3.0
+-- Performing Test SUPPORTS_NOTFOUND
+-- Performing Test SUPPORTS_NOTFOUND - Success
+-- Enforced cxx_std_11 CMake feature
+-- Looking for C++ include sys/types.h
+-- Looking for C++ include sys/types.h - found
+-- Looking for C++ include stdint.h
+-- Looking for C++ include stdint.h - found
+-- Looking for C++ include stddef.h
+-- Looking for C++ include stddef.h - found
+-- Check size of long double
+-- Check size of long double - done
+-- Check size of __float128
+-- Check size of __float128 - failed
+-- The C compiler identification is Clang 21.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (7.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-CDR-2.3.0/build
+-- Tests not compiled by default
+-- Configuring Fast CDR
+-- Version: 2.3.0
+-- Enforced cxx_std_11 CMake feature
+-- Configuring done (0.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-CDR-2.3.0/build
+[1/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/FastBuffer.cpp.o
+[2/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/exceptions/Exception.cpp.o
+[3/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/exceptions/NotEnoughMemoryException.cpp.o
+[4/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/exceptions/BadOptionalAccessException.cpp.o
+[5/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/exceptions/BadParamException.cpp.o
+[6/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/exceptions/LockedExternalAccessException.cpp.o
+[7/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/CdrSizeCalculator.cpp.o
+[8/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/FastCdr.cpp.o
+[9/11] Building CXX object src/cpp/CMakeFiles/fastcdr.dir/Cdr.cpp.o
+[10/11] Linking CXX shared library src\cpp\libfastcdr.so
+[10/11] Install the project...
+-- Install configuration: "Release"
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/cdr
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/cdr/fixed_size_string.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/Cdr.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/CdrEncoding.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/CdrSizeCalculator.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/config
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/config/doxygen_modules.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/detail
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/detail/container_recursive_inspector.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/eProsima_auto_link.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions/BadOptionalAccessException.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions/BadParamException.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions/Exception.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions/LockedExternalAccessException.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/exceptions/NotEnoughMemoryException.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/FastBuffer.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/FastCdr.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/fastcdr_dll.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr/detail
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr/detail/optional.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr/external.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr/MemberId.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/xcdr/optional.hpp
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastcdr/config.h
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/lib/libfastcdr.so
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/lib/cmake/fastcdr/fastcdr-shared-targets.cmake
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/lib/cmake/fastcdr/fastcdr-shared-targets-release.cmake
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/lib/cmake/fastcdr/fastcdr-config.cmake
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/lib/cmake/fastcdr/fastcdr-config-version.cmake
+-- Installing: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/share/fastcdr/LICENSE
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+Submodule 'thirdparty/android-ifaddrs' (https://github.com/michalsrb/android-ifaddrs.git) registered for path 'thirdparty/android-ifaddrs'
+Submodule 'thirdparty/asio' (https://github.com/chriskohlhoff/asio.git) registered for path 'thirdparty/asio'
+Submodule 'thirdparty/dds-types-test' (https://github.com/eProsima/dds-types-test) registered for path 'thirdparty/dds-types-test'
+Submodule 'thirdparty/fastcdr' (https://github.com/eProsima/Fast-CDR.git) registered for path 'thirdparty/fastcdr'
+Submodule 'thirdparty/tinyxml2' (https://github.com/leethomason/tinyxml2.git) registered for path 'thirdparty/tinyxml2'
+Cloning into 'C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/android-ifaddrs'...
+Cloning into 'C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/asio'...
+Cloning into 'C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/dds-types-test'...
+Cloning into 'C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/fastcdr'...
+Cloning into 'C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/tinyxml2'...
+Submodule path 'thirdparty/android-ifaddrs': checked out '7b1ce82817226e481d3cda0a5d06b66ebcc211f8'
+Submodule path 'thirdparty/asio': checked out '1f534288b4be0be2dd664aab43882a0aa3106a1d'
+Submodule path 'thirdparty/dds-types-test': checked out '03def739e4a5c2ca7bdc94536da5215442db235d'
+Submodule path 'thirdparty/fastcdr': checked out 'f55d548e04739c9e0cf332d72de1d440b14af797'
+Submodule path 'thirdparty/tinyxml2': checked out '8c8293ba8969a46947606a93ff0cb5a083aab47a'
+-- Setting build type to 'Release' as none was specified.
+-- The C compiler identification is Clang 21.0.0
+-- The CXX compiler identification is Clang 21.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Version: 3.2.2
+-- Performing Test SUPPORTS_NOTFOUND
+-- Performing Test SUPPORTS_NOTFOUND - Success
+-- Enforced cxx_std_11 CMake feature
+-- Setting warnings as errors...
+-- Found fastcdr
+-- Updating submodule thirdparty/asio
+-- Found Asio: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/asio/asio/include
+-- Found Asio : C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/asio/asio/include
+-- Updating submodule thirdparty/tinyxml2
+-- Found TinyXML2: C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/tinyxml2
+CMake Error at CMakeLists.txt:261 (find_package):
+  By not providing "Findfoonathan_memory.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "foonathan_memory", but CMake did not find one.
+
+  Could not find a package configuration file provided by "foonathan_memory"
+  with any of the following names:
+
+    foonathan_memoryConfig.cmake
+    foonathan_memory-config.cmake
+
+  Add the installation prefix of "foonathan_memory" to CMAKE_PREFIX_PATH or
+  set "foonathan_memory_DIR" to a directory containing one of the above
+  files.  If "foonathan_memory" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+-- Version: 3.2.2
+-- Enforced cxx_std_11 CMake feature
+-- Setting warnings as errors...
+-- Found fastcdr
+-- Updating submodule thirdparty/asio
+-- Found Asio : C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/Fast-DDS-3.2.2/thirdparty/asio/asio/include
+-- Updating submodule thirdparty/tinyxml2
+CMake Error at CMakeLists.txt:261 (find_package):
+  By not providing "Findfoonathan_memory.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "foonathan_memory", but CMake did not find one.
+
+  Could not find a package configuration file provided by "foonathan_memory"
+  with any of the following names:
+
+    foonathan_memoryConfig.cmake
+    foonathan_memory-config.cmake
+
+  Add the installation prefix of "foonathan_memory" to CMAKE_PREFIX_PATH or
+  set "foonathan_memory_DIR" to a directory containing one of the above
+  files.  If "foonathan_memory" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+ninja: error: loading 'build.ninja': GetLastError() = 2
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+~/Desktop/Cuevas/WearROS2/jros2
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 23 2933k   23  701k    0     0  1263k      0  0:00:02 --:--:--  0:00:02 1263k100 2933k  100 2933k    0     0  5022k      0 --:--:-- --:--:-- --:--:-- 75.1M
+Archive:  javacpp-platform-1.5.11-bin.zip
+  inflating: README.md               
+  inflating: LICENSE.txt             
+  inflating: CHANGELOG.md            
+  inflating: javacpp-linux-x86_64.jar  
+  inflating: javacpp-linux-arm64.jar  
+  inflating: javacpp-macosx-x86_64.jar  
+  inflating: javacpp-linux-ppc64le.jar  
+  inflating: javacpp-android-arm64.jar  
+  inflating: javacpp-windows-x86_64.jar  
+  inflating: javacpp-android-x86_64.jar  
+  inflating: javacpp-platform.jar    
+  inflating: javacpp-ios-x86_64.jar  
+  inflating: javacpp-ios-arm64.jar   
+  inflating: javacpp-macosx-arm64.jar  
+  inflating: javacpp.jar             
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjavaInfoMapper.java 
+Info: Targeting us\ihmc\fastddsjava\pointers\fastddsjava.java
+Info: Parsing C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild\install\include\fastddsjava.h
+Exception in thread "main" java.io.FileNotFoundException: Could not parse "fastdds\dds\core\detail\DDSReturnCode.hpp": File does not exist
+	at org.bytedeco.javacpp.tools.Parser.parse(Parser.java:4586)
+	at org.bytedeco.javacpp.tools.Parser.parse(Parser.java:4764)
+	at org.bytedeco.javacpp.tools.Builder.parse(Builder.java:95)
+	at org.bytedeco.javacpp.tools.Builder.build(Builder.java:1095)
+	at org.bytedeco.javacpp.tools.Builder.main(Builder.java:1450)
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/ByteVector.java 
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjava.java 
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjava_DataReaderListener.java 
+Note: us\ihmc\fastddsjava\pointers\fastddsjava_DataReaderListener.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjava_TopicDataWrapper.java 
+Note: us\ihmc\fastddsjava\pointers\fastddsjava_TopicDataWrapper.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjava_TopicDataWrapperType.java 
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/fastddsjavaInfoMapper.java 
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/MatchedStatus.java 
+Note: us\ihmc\fastddsjava\pointers\MatchedStatus.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Info: javac -cp javacpp.jar;C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild us/ihmc/fastddsjava/pointers/SubscriptionMatchedStatus.java 
+Note: us\ihmc\fastddsjava\pointers\SubscriptionMatchedStatus.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Info: Generating C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild\javainstall\jnijavacpp.cpp
+Info: Generating C:\Users\David.DESKTOP-A6NC9IE\Desktop\Cuevas\WearROS2\jros2\cppbuild\javainstall\jnifastddsjava.cpp
+In file included from jnifastddsjava.cpp:103:
+C:/Users/David.DESKTOP-A6NC9IE/Desktop/Cuevas/WearROS2/jros2/cppbuild/install/include/fastddsjava.h:4:10: fatal error: 'fastdds/rtps/common/SerializedPayload.hpp' file not found
+    4 | #include <fastdds/rtps/common/SerializedPayload.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+jnijavacpp.cpp:352:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  352 |     int pids[n], cids[n];
+      |              ^
+jnijavacpp.cpp:352:14: note: initializer of 'n' is not a constant expression
+jnijavacpp.cpp:351:15: note: declared here
+  351 |     const int n = sysconf(_SC_NPROCESSORS_CONF);
+      |               ^
+jnijavacpp.cpp:352:23: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  352 |     int pids[n], cids[n];
+      |                       ^
+jnijavacpp.cpp:352:23: note: initializer of 'n' is not a constant expression
+jnijavacpp.cpp:351:15: note: declared here
+  351 |     const int n = sysconf(_SC_NPROCESSORS_CONF);
+      |               ^
+jnijavacpp.cpp:411:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  411 |     int pids[n];
+      |              ^
+jnijavacpp.cpp:411:14: note: initializer of 'n' is not a constant expression
+jnijavacpp.cpp:410:15: note: declared here
+  410 |     const int n = sysconf(_SC_NPROCESSORS_CONF);
+      |               ^
+jnijavacpp.cpp:1656:19: warning: 'strtok' is deprecated: strtok() is not thread-safe; use strtok_r() instead [-Wdeprecated-declarations]
+ 1656 |     rptr = (char*)strtok((char*)ptr0, (char*)ptr1);
+      |                   ^
+C:/Users/David.DESKTOP-A6NC9IE/AppData/Local/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/windows-x86_64/bin/../sysroot/usr/include/string.h:125:20: note: 'strtok' has been explicitly marked deprecated here
+  125 |     __attribute__((__deprecated__("strtok() is not thread-safe; use strtok_r() instead")));
+      |                    ^
+4 warnings generated.
+~/Desktop/Cuevas/WearROS2/jros2
+~/Desktop/Cuevas/WearROS2/jros2/cppbuild ~/Desktop/Cuevas/WearROS2/jros2
+xjc not found
+~/Desktop/Cuevas/WearROS2/jros2
+
+Build complete! Libraries installed to:
+  android/src/main/jniLibs/arm64-v8a/

@@ -51,3 +51,7 @@ hs_err*
 
 **/build
 **/out
+
+
+dump_nm.txt
+build_log.txt
