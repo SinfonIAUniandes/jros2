@@ -10,3 +10,7 @@
 	path = ros2_interfaces/example_interfaces
 	url = https://github.com/ros2/example_interfaces
 	branch = humble
+[submodule "ros2_interfaces/audio_common_msgs"]
+	path = ros2_interfaces/audio_common_msgs
+	url = https://github.com/ros-drivers/audio_common.git
+	branch = ros2
