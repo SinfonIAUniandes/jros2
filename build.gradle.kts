@@ -123,6 +123,7 @@ tasks.register<jros2GenTask>("jros2GenerateDefaultInterfaces") {
         projectDir.resolve("ros2_interfaces").resolve("common_interfaces").resolve("visualization_msgs").absolutePath,
         projectDir.resolve("ros2_interfaces").resolve("audio_common_msgs").resolve("audio_common_msgs").absolutePath,
         projectDir.resolve("ros2_interfaces").resolve("audio_common_msgs").resolve("sound_play_msgs").absolutePath,
+        projectDir.resolve("ros2_interfaces").resolve("mobile_sensor_msgs").absolutePath,
 
         projectDir.resolve("ros2_interfaces").resolve("jros2_example_interfaces").absolutePath,
     )

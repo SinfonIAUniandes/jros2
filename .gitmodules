@@ -14,3 +14,6 @@
 	path = ros2_interfaces/audio_common_msgs
 	url = https://github.com/ros-drivers/audio_common.git
 	branch = ros2
+[submodule "ros2_interfaces/mobile_sensor_msgs"]
+	path = ros2_interfaces/mobile_sensor_msgs
+	url = https://github.com/SinfonIAUniandes/mobile_sensor_msgs
