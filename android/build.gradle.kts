@@ -97,7 +97,7 @@ android {
 }
 
 dependencies {
-   api("org.bytedeco:javacpp:1.5.11")
+   api("org.bytedeco:javacpp:1.5.9")
    api("us.ihmc:ihmc-native-library-loader:2.0.6")
    // Match Jackson version with ihmc-robot-data-logger
    api("com.fasterxml.jackson.core:jackson-databind:2.18.1")

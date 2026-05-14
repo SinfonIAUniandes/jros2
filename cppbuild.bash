@@ -164,7 +164,7 @@ pushd cppbuild
 mkdir -p us/ihmc/fastddsjava/pointers
 cp ../src/main/java/us/ihmc/fastddsjava/pointers/*.java us/ihmc/fastddsjava/pointers/
 
-JAVACPP_VERSION=1.5.11
+JAVACPP_VERSION=1.5.9
 if [ ! -f javacpp.jar ]; then
   curl -L https://github.com/bytedeco/javacpp/releases/download/$JAVACPP_VERSION/javacpp-platform-$JAVACPP_VERSION-bin.zip -o javacpp-platform-$JAVACPP_VERSION-bin.zip
   unzip -j javacpp-platform-$JAVACPP_VERSION-bin.zip
@@ -287,6 +287,8 @@ if [ "$ANDROID_COMPILE" == "1" ]; then
   # Map ANDROID_ABI to Android jniLibs directory naming
   if [ "$ANDROID_ABI" == "arm64-v8a" ]; then
     ANDROID_GEN_PATH="../android/src/main/jniLibs/arm64-v8a"
+  elif [ "$ANDROID_ABI" == "armeabi-v7a" ]; then
+    ANDROID_GEN_PATH="../android/src/main/jniLibs/armeabi-v7a"
   elif [ "$ANDROID_ABI" == "x86_64" ]; then
     ANDROID_GEN_PATH="../android/src/main/jniLibs/x86_64"
   else
